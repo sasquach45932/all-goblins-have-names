@@ -16,10 +16,11 @@
       "discord": "Cattegy#7436"
     }
   ],
-  "version": "3.0.0",
-  "minimumCoreVersion": "11.0",
-  "compatibleCoreVersion": "11.315",
-  "esmodules": ["scripts/index.js"],
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11"
+  },
+  "esmodules": [ "scripts/index.js" ],
   "url": "https://github.com/mnoreke/all-goblins-have-names",
   "readme": "README.md",
   "license": "LICENSE",
