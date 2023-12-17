@@ -1,27 +1,27 @@
 import {
-  isBetterTable,
-  isStoryTable,
-  rollBetterTable,
-  rollStoryTable,
+isBetterTable,
+isStoryTable,
+rollBetterTable,
+rollStoryTable,
 } from "./better-table-util.js";
 
 export function isWorldTable(str) {
-  return str.startsWith("@RollTable[");
+    return str.startsWith("@UUID[RollTable");
 }
 
 export function isCompendiumTable(str) {
-  return str.startsWith("@Compendium[");
+    return str.startsWith("@UUID[Compendium");
 }
 
 export async function rollTable(table) {
-  if (isBetterTable(table)) {
-    return joinResults(await rollBetterTable(table));
-  } else if (isStoryTable(table)) {
-    return await rollStoryTable(table);
-  } else {
-    let results = await table.roll();
-    return joinResults(results['results']);
-  }
+    if (isBetterTable(table)) {
+        return joinResults(await rollBetterTable(table));
+    } else if (isStoryTable(table)) {
+        return await rollStoryTable(table);
+    } else {
+        let results = await table.roll();
+        return joinResults(results['results']);
+    }
 }
 
 /**
@@ -29,5 +29,5 @@ export async function rollTable(table) {
  * @param {Array.<object>} results
  */
 function joinResults(results) {
-  return results.map((r) => r.data.text).join(" ");
+    return results.map((r) => r.data.text).join(" ");
 }

@@ -1,7 +1,7 @@
 {
-  "name": "all-goblins-have-names",
-  "title": "All Goblins Have Names",
-  "description": "Use a table as the display name for a token. New tokens get a random name.",
+  "name": "all-goblins-have-names-reborn",
+  "title": "All Goblins Have Names Reborn",
+  "description": "Use a rolltable as the display name for a token. New tokens get a random name.",
   "authors": [
     {
       "name": "Tom Rodriguez",
@@ -11,17 +11,21 @@
       "name": "Cattegy",
       "discord": "Cattegy#7436"
     }
+    {
+      "name": "Gandamir",
+      "discord": "gandamir"
+    },
   ],
-  "version": "2.0.1",
-  "minimumCoreVersion": "9.0",
-  "compatibleCoreVersion": "9.254",
+  "version": "3.0.0",
+  "minimumCoreVersion": "11.0",
+  "compatibleCoreVersion": "11.135",
   "esmodules": ["scripts/index.js"],
-  "url": "https://github.com/jsabol/all-goblins-have-names",
+  "url": "https://github.com/mnoreke/all-goblins-have-names",
   "readme": "README.md",
   "license": "LICENSE",
-  "bugs": "https://github.com/jsabol/all-goblins-have-names/issues",
-  "download": "https://github.com/jsabol/all-goblins-have-names/releases/latest/download/module.zip",
-  "manifest": "https://github.com/jsabol/all-goblins-have-names/releases/latest/download/module.json",
+  "bugs": "https://github.com/mnoreke/all-goblins-have-names/issues",
+  "download": "https://github.com/mnoreke/all-goblins-have-names/releases/latest/download/module.zip",
+  "manifest": "https://github.com/mnoreke/all-goblins-have-names/releases/latest/download/module.json",
   "flags": {
     "allowBugReporter": true
   }
