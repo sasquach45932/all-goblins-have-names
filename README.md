@@ -5,6 +5,10 @@
 A module for Foundry VTT. Allows you to use a rolltable as the Display Name for a token so each new
 token will get a random name. It can also roll random biographies for tokens when used with [Better Rolltables](https://foundryvtt.com/packages/better-rolltables/).
 
+## Reborn Status
+
+I picked this module up as it hadn't been updated in a while. I have it working for what I need for DnD5e. Anything else that doesn't work will be reviewd at as bug reports come in here on GitHub.
+
 ## How to use it
 
 First, grab your random name table and drag it into a Journal entry. That will give you some

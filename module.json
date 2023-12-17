@@ -4,21 +4,21 @@
   "description": "Use a rolltable as the display name for a token. New tokens get a random name.",
   "authors": [
     {
-      "name": "Tom Rodriguez",
-      "discord": "toasty#8538"
-    },
-    {
-      "name": "Cattegy",
-      "discord": "Cattegy#7436"
-    }
-    {
       "name": "Gandamir",
       "discord": "gandamir"
     },
+    {
+      "name": "Tom Rodriguez (previous)",
+      "discord": "toasty#8538"
+    },
+    {
+      "name": "Cattegy (previous)",
+      "discord": "Cattegy#7436"
+    }
   ],
   "version": "3.0.0",
   "minimumCoreVersion": "11.0",
-  "compatibleCoreVersion": "11.135",
+  "compatibleCoreVersion": "11.315",
   "esmodules": ["scripts/index.js"],
   "url": "https://github.com/mnoreke/all-goblins-have-names",
   "readme": "README.md",
