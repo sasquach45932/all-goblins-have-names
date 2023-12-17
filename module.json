@@ -16,6 +16,7 @@
       "discord": "Cattegy#7436"
     }
   ],
+  "version": "3.0.0",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
