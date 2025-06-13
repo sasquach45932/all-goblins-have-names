@@ -37,7 +37,7 @@ async function getRollTableResult(displayName) {
     // get the table by its ID
     const endIndex = displayName.indexOf("]");
     const table_id = displayName.substring(16, endIndex);
-    const table = game.tables.contents.find((t) => t.data._id == table_id);
+    const table = game.tables.contents.find((t) => t._id == table_id);
 
     if (table) {
         return await rollTable(table);
@@ -104,7 +104,7 @@ function mineForTableStrings(tokenData) {
     const actorId = tokenData.actorId || tokenData.document.id;
     if (!tokenData.actorLink && actorId) {
         let actor = game.actors.get(actorId);
-        let actorData = actor.data.data;
+        let actorData = actor.system;
 
         let bio;
         // structure of simple worldbuilding system
@@ -189,7 +189,7 @@ Hooks.on("ready", () => {
      * @param {TokenDocument} tokenDocument
      */
     Hooks.on("createToken", async (tokenDocument) => {
-        const toRoll = mineForTableStrings(tokenDocument.data);
+        const toRoll = mineForTableStrings(tokenDocument);
 
         // bail if there is no table strings to roll on
         if (!toRoll.nameTableStr && !toRoll.bioTableStr) {
@@ -197,7 +197,7 @@ Hooks.on("ready", () => {
         }
 
         // clear token name so we don't display software gore to the user while async is running
-        tokenDocument.data.name = " ";
+        tokenDocument.name = " ";
 
         // do the roll
         const result = await getNewRolledValues(toRoll);

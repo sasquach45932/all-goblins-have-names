@@ -29,5 +29,5 @@ export async function rollTable(table) {
  * @param {Array.<object>} results
  */
 function joinResults(results) {
-    return results.map((r) => r.data.text).join(" ");
+    return results.map((r) => r.description).join(" ");
 }
