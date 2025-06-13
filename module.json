@@ -16,16 +16,15 @@
       "discord": "Cattegy#7436"
     }
   ],
-  "version": "3.0.2",
+  "version": "#{VERSION}#",
   "compatibility": {
-    "minimum": "12",
+    "minimum": "13",
     "verified": "13"
   },
   "esmodules": [ "scripts/index.js" ],
-  "url": "https://github.com/mnoreke/all-goblins-have-names",
-  "readme": "README.md",
-  "license": "LICENSE",
-  "bugs": "https://github.com/mnoreke/all-goblins-have-names/issues",
-  "download": "https://github.com/mnoreke/all-goblins-have-names/releases/latest/download/module.zip",
-  "manifest": "https://github.com/mnoreke/all-goblins-have-names/releases/latest/download/module.json"
+   "url":"#{URL}#",
+   "manifest":"#{MANIFEST}#",
+   "download":"#{DOWNLOAD}#",
+   "license":"LICENSE",
+   "readme":"README.md"
 }
