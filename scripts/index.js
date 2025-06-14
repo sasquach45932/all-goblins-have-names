@@ -119,7 +119,7 @@ function mineForTableStrings(tokenData) {
             actorData.details.biography.value
         ) {
             bio = actorData.details.biography.value;
-            bioDataPath = "data.details.biography.value";
+            bioDataPath = "system.details.biography.value";
         }
 
         // get text out of bio
@@ -171,7 +171,7 @@ function saveRolledValues(tokenDocument, result) {
     tokenDocument.update({
         name: result.name,
     });
-    tokenDocument.actor.update({ [result.bioDataPath]: result.bio });
+    if (result.bio) tokenDocument.actor.update({ [result.bioDataPath]: result.bio });
 }
 
 /**
