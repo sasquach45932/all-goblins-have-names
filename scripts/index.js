@@ -172,6 +172,10 @@ function saveRolledValues(tokenDocument, result) {
         name: result.name,
     });
     if (result.bio) tokenDocument.actor.update({ [result.bioDataPath]: result.bio });
+	if (game.settings.get("all-goblins-have-names-reborn", "syncActorName") && result.name)
+		tokenDocument.actor.update({
+			name: result.name
+		});
 }
 
 /**
@@ -182,6 +186,14 @@ function saveRolledValues(tokenDocument, result) {
 Hooks.once("init", () => {
     // add the API
     game.allGoblinsHaveNames = new AllGoblinsHaveNames();
+	game.settings.register("all-goblins-have-names-reborn", "syncActorName", {
+		name: "Sync actor name.",
+		hint: "When enabled automatically synchronize actor name with their token name.",
+		default: false,
+		scope: "world",
+		type: Boolean,
+		config: true
+	});
 });
 
 Hooks.on("ready", () => {
